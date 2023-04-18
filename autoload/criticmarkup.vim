@@ -13,12 +13,17 @@ function! criticmarkup#InjectHighlighting()
     syn region criticComment matchgroup=criticMeta start=/{>>/ end=/<<}/ containedin=pandocAtxHeader,pandocBlockQuote,pandocCodeBlock,pandocFootnoteBlock,pandocListItem,pandocUListItem,pandocDefinitionBlock,pandocYAMLHeader,yamlBlock,yamlHeader,yamlPlainScalar,yamlFlowString,htmlH1,htmlH2,htmlH3,htmlH4,htmlH5,htmlH6,mkdBlockquote,mkdCode,mkdLinkDefTarget,mkdListItem,mkdListItemLine,mkdMath,mkdNonListItem,mkdNonListItemBlock concealends
     syn region criticHighlight matchgroup=criticHighlighter start=/{==/ end=/==}/ containedin=pandocAtxHeader,pandocBlockQuote,pandocCodeBlock,pandocFootnoteBlock,pandocListItem,pandocUListItem,pandocDefinitionBlock,pandocYAMLHeader,yamlBlock,yamlHeader,yamlPlainScalar,yamlFlowString,htmlH1,htmlH2,htmlH3,htmlH4,htmlH5,htmlH6,mkdBlockquote,mkdCode,mkdLinkDefTarget,mkdListItem,mkdListItemLine,mkdMath,mkdNonListItem,mkdNonListItemBlock concealends
 
+    hi criticAdd guibg=#1a1a1a guifg=#00c584 
+    hi criticDel guibg=#1a1a1a guifg=#f73f45 
+    hi criticChange guibg=#1a1a1a guifg=#ffa118
     hi link criticAddition criticAdd
     hi link criticDeletion criticDel
-    hi link criticSubstitutionAddition criticAddition
-    hi link criticSubstitutionDeletion criticDeletion
-    hi link criticSubstitutionAdditionMark criticAddition
-    hi link criticSubstitutionDeletionMark criticDeletion
+    hi link criticSubstitutionAddition criticChange
+    hi link criticSubstitutionDeletion criticDel
+    hi link criticSubstitutionAdditionMark criticChange
+    hi link criticSubstitutionDeletionMark criticChange
+    hi criticMeta guibg=#1a1a1a guifg=#8b56c0 
+    hi criticHighlighter guibg=#1a1a1a guifg=#ffce00 
     hi link criticComment criticMeta
     hi link criticHighlight criticHighlighter
 endfunction
