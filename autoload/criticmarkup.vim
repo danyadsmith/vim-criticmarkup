@@ -16,10 +16,11 @@ function! criticmarkup#InjectHighlighting()
     hi criticAdd guibg=#1a1a1a guifg=#00c584 
     hi criticDel guibg=#1a1a1a guifg=#f73f45 
     hi criticChange guibg=#1a1a1a guifg=#ffa118
+    hi criticMute guibg=#1a1a1a guifg=#4A4A4A
     hi link criticAddition criticAdd
     hi link criticDeletion criticDel
     hi link criticSubstitutionAddition criticChange
-    hi link criticSubstitutionDeletion criticDel
+    hi link criticSubstitutionDeletion criticMute
     hi link criticSubstitutionAdditionMark criticChange
     hi link criticSubstitutionDeletionMark criticChange
     hi criticMeta guibg=#1a1a1a guifg=#8b56c0 
