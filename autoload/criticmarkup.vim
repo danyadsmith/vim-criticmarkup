@@ -14,7 +14,7 @@ function! criticmarkup#InjectHighlighting()
     syn region criticHighlight matchgroup=criticHighlighter start=/{==/ end=/==}/ containedin=pandocAtxHeader,pandocBlockQuote,pandocCodeBlock,pandocFootnoteBlock,pandocListItem,pandocUListItem,pandocDefinitionBlock,pandocYAMLHeader,yamlBlock,yamlHeader,yamlPlainScalar,yamlFlowString,htmlH1,htmlH2,htmlH3,htmlH4,htmlH5,htmlH6,mkdBlockquote,mkdCode,mkdLinkDefTarget,mkdListItem,mkdListItemLine,mkdMath,mkdNonListItem,mkdNonListItemBlock concealends
 
     hi criticAdd guibg=#1a1a1a guifg=#00c584 
-    hi criticDel guibg=#1a1a1a guifg=#f73f45 cterm=strikethrough ctermfg=red
+    hi criticDel guibg=#1a1a1a guifg=#f73f45 cterm=strikethrough ctermfg=red term=strikethrough gui=strikethrough
     hi criticChange guibg=#1a1a1a guifg=#ffa118
     hi criticMute guibg=#1a1a1a guifg=#4A4A4A
     hi link criticAddition criticAdd
